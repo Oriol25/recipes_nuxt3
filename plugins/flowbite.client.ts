@@ -1,6 +1,6 @@
 export default defineNuxtPlugin((app) => {
-  app.hook("page:loading:end", async () => {
-    console.log("Flowbite is ready to use!");
+  const router = useRouter();
+  router.afterEach(() => {
     useFlowbite((f) => {
       setTimeout(() => {
         f.initFlowbite();
