@@ -1,3 +1,38 @@
+<script setup>
+import { ref } from "vue";
+
+const menu = ref([
+  {
+    title: "Dashboard",
+    badge: "pro",
+  },
+  {
+    title: "Users",
+  },
+  {
+    title: "E-commerce",
+    items: [
+      {
+        title: "Overview",
+        badge: "new",
+      },
+      {
+        title: "Orders",
+      },
+      {
+        title: "Products",
+      },
+      {
+        title: "Customers",
+      },
+      {
+        title: "Analytics",
+      },
+    ],
+  },
+]);
+</script>
+
 <template lang="">
   <div>
     <button
@@ -29,13 +64,17 @@
       aria-label="Sidebar"
     >
       <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-        <ul class="space-y-2 font-medium">          
-            <MenuItem title="Dashboard" badge="pro" />
-            <MenuGroup title="E-commerce" />
+        <ul class="space-y-2 font-medium">
+          <template v-for="item in menu">
+            <MenuGroup
+              v-if="item.items"
+              :title="item.title"
+              :items="item.items"
+            />
+            <MenuList v-else :title="item.title" :badge="item.badge" :icon="false" />
+          </template>
         </ul>
       </div>
     </aside>
   </div>
 </template>
-<script></script>
-
