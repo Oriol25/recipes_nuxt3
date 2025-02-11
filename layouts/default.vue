@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="dark:bg-gray-800">
     <Header />
-    <div class="p-4 sm:ml-64">
+    <div class="h-screen w-full pl-64 p-4 sm:ml-6">
       <div
-        class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700"
+        class="h-full rounded-lg "
       >
         <div
-          class="flex p-8 h-48 mb-4 rounded-sm bg-gray-50 dark:bg-gray-800"
+          class="h-full flex p-8 mb-4 rounded-sm bg-gray-50 dark:bg-gray-800"
         >
           <slot />
         </div>
