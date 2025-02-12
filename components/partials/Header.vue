@@ -5,30 +5,11 @@ const menu = ref([
   {
     title: "Dashboard",
     badge: "pro",
+    url: "/"
   },
   {
     title: "Users",
-  },
-  {
-    title: "E-commerce",
-    items: [
-      {
-        title: "Overview",
-        badge: "new",
-      },
-      {
-        title: "Orders",
-      },
-      {
-        title: "Products",
-      },
-      {
-        title: "Customers",
-      },
-      {
-        title: "Analytics",
-      },
-    ],
+    url: "/users",
   },
 ]);
 </script>
@@ -71,7 +52,7 @@ const menu = ref([
               :title="item.title"
               :items="item.items"
             />
-            <MenuList v-else :title="item.title" :badge="item.badge" :icon="false" />
+            <MenuList v-else :title="item.title" :badge="item.badge" :icon="false" :url="item.url" />
           </template>
         </ul>
       </div>
