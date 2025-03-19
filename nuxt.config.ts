@@ -15,6 +15,14 @@ export default defineNuxtConfig({
       path: "~/components/partials/menu",
       prefix: "Menu",
     },
+    {
+      path: "~/components/partials/html",
+      prefix: "Html",
+    },
+    {
+      path: "~/components/partials/html/input",
+      prefix: "HtmlInput",
+    },
   ],
 
   modules: ["@nuxtjs/tailwindcss"],

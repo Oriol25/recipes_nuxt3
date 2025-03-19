@@ -40,6 +40,6 @@ const results = await $pb.collection('users').getList(1, 50)
 
 <template>
   <div>
-    <Table :headers="headers" :data="results" />
+    <Table :headers="headers" :data="results" new_url="/users/create" new_text="user" />
   </div>
 </template>

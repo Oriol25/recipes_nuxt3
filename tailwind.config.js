@@ -19,5 +19,5 @@ export default {
       '2xl': '1536px', 
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("flowbite/plugin"), require('flowbite-typography'),],
 };
